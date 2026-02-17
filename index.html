@@ -31,11 +31,52 @@
         <link rel="stylesheet" href="css/responsive.css"/>
         <!-- End Include All CSS -->
 
+        <!-- Google Translate Widget Styles -->
+        <style>
+            .google-translate-container {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 9999;
+                background: rgba(255,255,255,0.95);
+                padding: 5px 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            .goog-te-gadget {
+                font-family: inherit !important;
+            }
+            .goog-te-gadget-simple {
+                background-color: transparent !important;
+                border: none !important;
+                padding: 0 !important;
+                font-size: 12px !important;
+            }
+            .goog-te-banner-frame {
+                display: none !important;
+            }
+            body {
+                top: 0 !important;
+            }
+            @media (max-width: 768px) {
+                .google-translate-container {
+                    top: auto;
+                    bottom: 70px;
+                    right: 10px;
+                }
+            }
+        </style>
+
         <!-- Favicon Icon -->
         <link rel="icon"  type="image/png" href="images/favicon.png">
         <!-- Favicon Icon -->
     </head>
     <body>
+        <!-- Google Translate Widget -->
+        <div class="google-translate-container">
+            <div id="google_translate_element"></div>
+        </div>
+
         <!-- Preloading -->
         <div class="preloader text-center">
             <div class="la-ball-scale-multiple la-2x">
@@ -94,7 +135,7 @@
                 <div class="center_align">
                     <div class="about_widget_area">
                         <div class="wd_logo">
-                            <a href="index.html"><img src="images/logo.png" alt="makeover"/></a>
+                            <a href="index.html"><img src="images/blisse-logo.png" alt="Blisse"/></a>
                         </div>
                         <p>
                             Blisse - sinu ilu ja heaolu partner. Pakume professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.
@@ -205,7 +246,7 @@
                                  data-paddingbottom="[0,0,0,0]"
                                  data-paddingleft="[80,50,0,30]"
 
-                                 >There are many variations 
+                                 >Professionaalsed kehahooldused ja näohooldused Tallinnas
                             </div>
                             <div class="tp-caption tp-resizeme"
                                  data-x="['left', 'left', 'center', 'center']" 
@@ -233,7 +274,7 @@
                                  data-paddingbottom="[0,0,0,0]"
                                  data-paddingleft="[80,50,0,0]"
 
-                                 ><a href="booking.html" class="mo_btn mob_lg"><i class="icofont-cart-alt"></i>Make Appointment</a>
+                                 ><a href="booking.html" class="mo_btn mob_lg"><i class="icofont-cart-alt"></i>Broneeri aeg</a>
                             </div>
                             <div class="tp-caption d-md-none d-sm-none d-xs-none d-lg-block"
                                 data-frames='[{"delay":2000,"speed":700,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"power3.inOut"},
@@ -293,11 +334,11 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="sectionTitle text-center">
                             <img src="images/icons/1.png" alt=""/>
-                            <h5 class="primaryFont">Welcome</h5>
-                            <h2>An Increadible <span class="colorPrimary fontWeight400">Spa Experience</span></h2>
+                            <h5 class="primaryFont">Tere tulemast</h5>
+                            <h2>Uskumatu <span class="colorPrimary fontWeight400">Ilukogemus</span></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra<br/> maecenas accumsan lacus vel facilisis. 
+                                Blisse pakub professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.
+                                Meie eesmärk on aidata sul saavutada oma parima vormi ja enesetunde.<br/> Koge tõelist luksust ja lõõgastust.
                             </p>
                         </div>
                     </div>
@@ -305,20 +346,20 @@
                 <div  class="row">
                     <div class="col-md-6">
                         <div class="actionBox">
-                            <h3>Clay Masks</h3>
+                            <h3>Kehahooldused</h3>
                             <p>
-                                A good clay mask can go a long way <br/>to draw out impurities skin.
+                                LPG massaaž, krüolipolüüs ja muud<br/>tõhusad kehakontuuri hooldused.
                             </p>
-                            <a href="shop.html" class="mo_btn"><i class="icofont-cart-alt"></i>Shop Now</a>
+                            <a href="salongihooldused.html" class="mo_btn"><i class="icofont-cart-alt"></i>Vaata hooldusi</a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="actionBox abBg2">
-                            <h3>Wellness & Spa</h3>
+                            <h3>Näohooldused</h3>
                             <p>
-                                A good clay mask can go a long way <br/>to draw out impurities skin.
+                                RF lifting, HIFU ja muud<br/>professionaalsed näohooldused.
                             </p>
-                            <a href="shop2.html" class="mo_btn"><i class="icofont-cart-alt"></i>Shop Now</a>
+                            <a href="salongihooldused.html#naohooldused" class="mo_btn"><i class="icofont-cart-alt"></i>Vaata hooldusi</a>
                         </div>
                     </div>
                 </div>
@@ -345,7 +386,7 @@
                                 <img src="images/bg/6.png" alt=""/>
                             </div>
                             <div class="abImg float-right">
-                                <img src="images/home_01/1.jpg" alt="Makeover"/>
+                                <img src="images/home_01/1.jpg" alt="Blisse"/>
                             </div>
                             <div class="expCounter">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -358,26 +399,26 @@
                                           -86 2196 -502 580 -1177 869 -1701 727z"/>
                                     </g>
                                 </svg>
-                                <div class="expContent funfact" data-count="20">
-                                    <h2><span class="counter">20</span><i>+</i></h2>
-                                    <p>Years of Expert</p>
+                                <div class="expContent funfact" data-count="10">
+                                    <h2><span class="counter">10</span><i>+</i></h2>
+                                    <p>Aastat kogemust</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="abContent">
-                            <h3>About Us</h3>
+                            <h3>Meist</h3>
                             <h2>
-                                Beauty and <span class="fontWeight400 colorPrimary">Spa Center</span>
+                                Ilu- ja <span class="fontWeight400 colorPrimary">Kehahoolduste Keskus</span>
                             </h2>
                             <p class="leads">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                Blisse on Tallinna juhtiv keha- ja näohoolduste keskus, mis pakub kaasaegseid iluteenuseid.
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore mel ei harum appellantur disputationi
+                                Meie kogenud spetsialistid kasutavad tipptasemel seadmeid ja tõestatud meetodeid, et aidata sul saavutada soovitud tulemused ohutult ja efektiivselt.
                             </p>
-                            <a href="about.html" class="mo_btn mob_lg mob_shadow"><i class="icofont-long-arrow-right"></i>Learn More</a>
+                            <a href="about.html" class="mo_btn mob_lg mob_shadow"><i class="icofont-long-arrow-right"></i>Loe rohkem</a>
                         </div>
                     </div>
                 </div>
@@ -395,11 +436,11 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="sectionTitle text-center">
                             <img src="images/icons/2.png" alt=""/>
-                            <h5 class="primaryFont">What We Do</h5>
-                            <h2>Our <span class="colorPrimary fontWeight400">Services</span></h2>
+                            <h5 class="primaryFont">Mida me pakume</h5>
+                            <h2>Meie <span class="colorPrimary fontWeight400">Teenused</span></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra<br/> maecenas accumsan lacus vel facilisis. 
+                                Pakume laia valiku professionaalseid keha- ja näohooldusi, mis aitavad sul saavutada soovitud tulemused.
+                                Meie kaasaegsed tehnoloogiad tagavad efektiivsed<br/> ja turvalised protseduurid.
                             </p>
                         </div>
                     </div>
@@ -421,9 +462,9 @@
                                 <div class="bg_icon"><i class="mkov-stone"></i></div>
                                 <i class="mkov-stone"></i>
                             </div>
-                            <h3><a href="single-service.html">Stone spa</a></h3>
+                            <h3><a href="salongihooldused.html">LPG Massaaž</a></h3>
                             <p>
-                                Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                                Tõhus meetod tselluliidi vähendamiseks ja naha pinguldamiseks.
                             </p>
                         </div>
                     </div>
@@ -443,9 +484,9 @@
                                 <div class="bg_icon"><i class="mkov-candle"></i></div>
                                 <i class="mkov-candle"></i>
                             </div>
-                            <h3><a href="single-service.html">Candle Message</a></h3>
+                            <h3><a href="salongihooldused.html">Krüolipolüüs</a></h3>
                             <p>
-                                Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                                Mitteinvasiivne rasvakoe külmutamise meetod püsivate tulemustega.
                             </p>
                         </div>
                     </div>
@@ -465,9 +506,9 @@
                                 <div class="bg_icon"><i class="mkov-morter"></i></div>
                                 <i class="mkov-morter"></i>
                             </div>
-                            <h3><a href="single-service.html">Mortar</a></h3>
+                            <h3><a href="salongihooldused.html#naohooldused">RF Lifting</a></h3>
                             <p>
-                                Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                                Raadiosagedusel põhinev naha pinguldamine ja kollageeni tootmine.
                             </p>
                         </div>
                     </div>
@@ -487,9 +528,9 @@
                                 <div class="bg_icon"><i class="mkov-bottle"></i></div>
                                 <i class="mkov-bottle"></i>
                             </div>
-                            <h3><a href="single-service.html">Medicine</a></h3>
+                            <h3><a href="salongihooldused.html#naohooldused">HIFU Lifting</a></h3>
                             <p>
-                                Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+                                Kõrge intensiivsusega ultraheli sügavaks naha tõstmiseks.
                             </p>
                         </div>
                     </div>
@@ -510,56 +551,55 @@
                             <div class="row">
                                 <div class="col-lg-7 col-md-7">
                                     <div class="appointment_form">
-                                        <h3>Make Appointment</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                        <h3>Broneeri aeg</h3>
+                                        <p>Täida vorm ja võtame sinuga ühendust sobiva aja leidmiseks.</p>
                                         <form action="#" method="post" class="row">
                                             <div class="input-field col-lg-6">
-                                                <input type="text" name="name" placeholder="Name"/>
+                                                <input type="text" name="name" placeholder="Nimi"/>
                                             </div>
                                             <div class="input-field col-lg-6">
-                                                <input type="email" name="email" placeholder="E-mail"/>
+                                                <input type="email" name="email" placeholder="E-post"/>
                                             </div>
                                             <div class="input-field col-lg-6">
-                                                <input type="number" name="phone" placeholder="Phone Number"/>
+                                                <input type="number" name="phone" placeholder="Telefon"/>
                                             </div>
                                             <div class="input-field col-lg-6">
                                                 <select name="select_subject">
-                                                    <option selected="selected">Select Subject</option>
-                                                    <option>Sports Massage</option>
-                                                    <option>Stone Massage</option>
-                                                    <option>Body Massage</option>
-                                                    <option>Head Massage</option>
-                                                    <option>Facial & Massage</option>
+                                                    <option selected="selected">Vali hooldus</option>
+                                                    <option>LPG Massaaž</option>
+                                                    <option>Krüolipolüüs</option>
+                                                    <option>RF Lifting</option>
+                                                    <option>HIFU Lifting</option>
+                                                    <option>Näohooldus</option>
                                                 </select>
                                             </div>
                                             <div class="input-field col-lg-12">
-                                                <input type="text" name="date_time" class="datetime-picker" placeholder="Select Date & Time"/>
+                                                <input type="text" name="date_time" class="datetime-picker" placeholder="Vali kuupäev ja kellaaeg"/>
                                                 <i class="icofont-ui-calendar"></i>
                                             </div>
                                             <div class="input-field col-lg-12">
-                                                <textarea name="message" placeholder="Your Message"></textarea>
+                                                <textarea name="message" placeholder="Sinu sõnum"></textarea>
                                             </div>
                                             <div class="input-field col-lg-12">
-                                                <button type="submit" class="mo_btn"><i class="icofont-calendar"></i>Make  An Appointment</button>
+                                                <button type="submit" class="mo_btn"><i class="icofont-calendar"></i>Broneeri aeg</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-5">
                                     <div class="icon_box_01">
-                                        <h4><i class="icofont-clock-time"></i>Hours:</h4>
+                                        <h4><i class="icofont-clock-time"></i>Lahtiolekuajad:</h4>
                                         <p>
-                                            Mon to Fri: 7:30 am — 1:00 am<br>
-                                            Sat: 9:00 am — 1:00 am<br>
-                                            Sun: 9:00 am — 11:30 pm
+                                            E-R: 10:00 — 20:00<br>
+                                            L: 10:00 — 18:00<br>
+                                            P: Suletud
                                         </p>
                                     </div>
                                     <div class="icon_box_01">
-                                        <h4><i class="icofont-location-pin"></i>Location:</h4>
+                                        <h4><i class="icofont-location-pin"></i>Asukoht:</h4>
                                         <p>
-                                            85 Royal Mint Street,<br>
-                                            London, E1 8LG<br>
-                                            United Kingdom
+                                            Tallinn,<br>
+                                            Eesti
                                         </p>
                                     </div>
                                 </div>
@@ -581,11 +621,11 @@
                     <div class="col-lg-8">
                         <div class="sectionTitle text-left">
                             <img src="images/icons/2.png" alt="">
-                            <h5 class="primaryFont">Get Inspiration</h5>
-                            <h2>Price <span class="colorPrimary fontWeight400">Plans</span></h2>
+                            <h5 class="primaryFont">Säästa pakettidega</h5>
+                            <h2>Hinna<span class="colorPrimary fontWeight400">kirjad</span></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  
+                                Meie paketid pakuvad soodsamaid hindu ja kombineeritud hooldusi parimate tulemuste saavutamiseks.
+                                Säästa kuni 70% tavahinnast meie populaarsemate pakettidega.
                             </p>
                         </div>
                     </div>
@@ -595,84 +635,84 @@
                         <div class="package_item pl_area">
                             <img src="images/home_01/p1.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Makeup & Massage</a>
+                                <a href="hoolduste-paketid.html">LPG Massaaž 5x</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $50
+                                <span>alates</span>
+                                149€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>5 LPG massaaži seanssi</p>
                         </div>
                         <div class="package_item pl_area">
                             <img src="images/home_01/p2.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Sauna relax</a>
+                                <a href="hoolduste-paketid.html">Topeltmõju</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $61
+                                <span>alates</span>
+                                249€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>5x LPG + 5x ReShape</p>
                         </div>
                         <div class="package_item pl_area">
                             <img src="images/home_01/p3.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Geothermal spa</a>
+                                <a href="hoolduste-paketid.html">Talvekombo</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $47
+                                <span>alates</span>
+                                399€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>LPG + Krüo + ReShape</p>
                         </div>
                         <div class="package_item pl_area">
                             <img src="images/home_01/p4.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Backbone therapy</a>
+                                <a href="hoolduste-paketid.html">Best Body Combo</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $38
+                                <span>alates</span>
+                                349€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>Parim kehakontuuri pakett</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="package_item pr_area">
                             <img src="images/home_01/p5.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Aroma therapy</a>
+                                <a href="hoolduste-paketid.html">MEGA40</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $55
+                                <span>alates</span>
+                                525€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>40 protseduuri - säästa 70%</p>
                         </div>
                         <div class="package_item pr_area">
                             <img src="images/home_01/p6.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Face facial</a>
+                                <a href="hoolduste-paketid.html">Näohooldus pakett</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $70
+                                <span>alates</span>
+                                349€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>LPG + ReShape näole</p>
                         </div>
                         <div class="package_item pr_area">
                             <img src="images/home_01/p7.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Body Massage</a>
+                                <a href="hoolduste-paketid.html">Kiirsalenemine</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $80
+                                <span>alates</span>
+                                359€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>Intensiivne rasvapõletus</p>
                         </div>
                         <div class="package_item pr_area">
                             <img src="images/home_01/p8.jpg" alt=""/>
                             <h5>
-                                <a href="javascript:void(0);">Massage therapy</a>
+                                <a href="hoolduste-paketid.html">Superhooldus</a>
                                 <span class="piborder"></span>
-                                <span>from</span>
-                                $60
+                                <span>alates</span>
+                                199€
                             </h5>
-                            <p>20 mins Revitalize Facial</p>
+                            <p>3-tunnine komplekshooldus</p>
                         </div>
                     </div>
                 </div>
@@ -712,12 +752,12 @@
                                         <span></span><span></span><span></span><span></span>
                                     </div>
                                     <p class="quatation">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
-                                        Quis ipsum suspendisse ultrices 
+                                        Olen väga rahul LPG massaaži tulemustega! Tselluliit on märgatavalt vähenenud ja nahk on palju siledamam.<br>
+                                        Soovitan soojalt kõigile!
                                     </p>
                                     <div class="test_author">
-                                        <span>Design Grue</span>
-                                        <p>California, USA</p>
+                                        <span>Maria K.</span>
+                                        <p>Tallinn, Eesti</p>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -726,12 +766,12 @@
                                         <span></span><span></span><span></span><span></span>
                                     </div>
                                     <p class="quatation">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
-                                        Quis ipsum suspendisse ultrices 
+                                        MEGA40 pakett oli parim otsus! Tulemused olid nähtavad juba esimeste seansside järel.<br>
+                                        Professionaalne teenindus ja meeldiv atmosfäär.
                                     </p>
                                     <div class="test_author">
-                                        <span>William Smith</span>
-                                        <p>New York, USA</p>
+                                        <span>Kristiina L.</span>
+                                        <p>Tartu, Eesti</p>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -740,12 +780,12 @@
                                         <span></span><span></span><span></span><span></span>
                                     </div>
                                     <p class="quatation">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
-                                        Quis ipsum suspendisse ultrices 
+                                        RF lifting on tõesti imelisi tulemusi andnud. Näonahk on pinguldunud ja kortse on vähem.<br>
+                                        Tänan teid suurepärase töö eest!
                                     </p>
                                     <div class="test_author">
-                                        <span>Mark Smith</span>
-                                        <p>London, UK</p>
+                                        <span>Anneli R.</span>
+                                        <p>Pärnu, Eesti</p>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -754,12 +794,12 @@
                                         <span></span><span></span><span></span><span></span>
                                     </div>
                                     <p class="quatation">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
-                                        Quis ipsum suspendisse ultrices 
+                                        Krüolipolüüs aitas mul vabaneda kangekaelsest kõhurasvast, mida sport ega dieet ei vähendanud.<br>
+                                        Tulemus on püsiv ja olen väga õnnelik!
                                     </p>
                                     <div class="test_author">
-                                        <span>Design Grue</span>
-                                        <p>California, USA</p>
+                                        <span>Kairi M.</span>
+                                        <p>Tallinn, Eesti</p>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -768,12 +808,12 @@
                                         <span></span><span></span><span></span><span></span>
                                     </div>
                                     <p class="quatation">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
-                                        Quis ipsum suspendisse ultrices 
+                                        Topeltmõju pakett oli ideaalne valik! LPG ja ReShape kombinatsioon andis kiireid tulemusi.<br>
+                                        Soovitan kõigile, kes soovivad nähtavat muutust!
                                     </p>
                                     <div class="test_author">
-                                        <span>William Smith</span>
-                                        <p>New York, USA</p>
+                                        <span>Helen T.</span>
+                                        <p>Viljandi, Eesti</p>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -782,12 +822,12 @@
                                         <span></span><span></span><span></span><span></span>
                                     </div>
                                     <p class="quatation">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
-                                        Quis ipsum suspendisse ultrices 
+                                        HIFU lifting tegi minust uue inimese! Nägu näeb välja noorem ja värskem.<br>
+                                        Blisse meeskond on tõelised professionaalid!
                                     </p>
                                     <div class="test_author">
-                                        <span>Mark Smith</span>
-                                        <p>London, UK</p>
+                                        <span>Liina S.</span>
+                                        <p>Tallinn, Eesti</p>
                                     </div>
                                 </div>
                             </div>
@@ -828,11 +868,11 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="sectionTitle text-center">
                             <img src="images/icons/2.png" alt="">
-                            <h5 class="primaryFont">News About Our Company</h5>
-                            <h2>News <span class="colorPrimary fontWeight400">Feed</span></h2>
+                            <h5 class="primaryFont">Kasulik info</h5>
+                            <h2>Uudised ja <span class="colorPrimary fontWeight400">Artiklid</span></h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  
+                                Loe kasulikke artikleid kehahoolduste, nahahoolduse ja heaolu teemadel.
+                                Jagame nõuandeid, kuidas saavutada ja säilitada oma parimat vormi.
                             </p>
                         </div>
                     </div>
@@ -842,10 +882,10 @@
                         <div class="blog_item_01">
                             <img src="images/blog/1.jpg" alt=""/>
                             <div class="bp_content">
-                                <span>February 18, 2017</span>
-                                <h3><a href="single-blog.html">Spring is in the Air and and So Our These Amazing Spa Offers</a></h3>
+                                <span>18. veebruar 2024</span>
+                                <h3><a href="single-blog.html">LPG massaaž - tõhus meetod tselluliidi vastu võitlemiseks</a></h3>
                                 <a class="lr_more" href="single-blog.html">
-                                    Learn More
+                                    Loe edasi
                                     <svg width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
                                         <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
                                     </svg>
@@ -857,10 +897,10 @@
                         <div class="blog_item_01">
                             <img src="images/blog/2.jpg" alt=""/>
                             <div class="bp_content">
-                                <span>February 18, 2017</span>
-                                <h3><a href="single-blog.html">We giving Amazing special spa and message service for vip.</a></h3>
+                                <span>15. jaanuar 2024</span>
+                                <h3><a href="single-blog.html">Krüolipolüüs - külmaga rasvarakkude hävitamine ilma operatsioonita</a></h3>
                                 <a class="lr_more" href="single-blog.html">
-                                    Learn More
+                                    Loe edasi
                                     <svg width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
                                         <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
                                     </svg>
@@ -872,10 +912,10 @@
                         <div class="blog_item_01">
                             <img src="images/blog/3.jpg" alt=""/>
                             <div class="bp_content">
-                                <span>February 18, 2017</span>
-                                <h3><a href="single-blog.html">We also offer outside special spa and message catering; take-away</a></h3>
+                                <span>10. detsember 2023</span>
+                                <h3><a href="single-blog.html">HIFU lifting - näonaha pinguldamine ilma süstideta</a></h3>
                                 <a class="lr_more" href="single-blog.html">
-                                    Learn More
+                                    Loe edasi
                                     <svg width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
                                         <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
                                     </svg>
@@ -908,22 +948,22 @@
                 <div class="row">
                     <div class="col-md-4 col-lg-4 col-xl-4">
                         <aside class="widget about_widget">
-                            <h3 class="widget_title">About Us</h3>
+                            <h3 class="widget_title">Meist</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipi-scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Blisse pakub professionaalseid keha- ja näohooldusi Tallinnas. Meie eesmärk on aidata sul saavutada oma parim vorm ja enesetunne.
                             </p>
-                            <a href="booking.html" class="mo_btn mob_lg"><i class="icofont-long-arrow-right"></i>Make Appointment</a>
+                            <a href="booking.html" class="mo_btn mob_lg"><i class="icofont-long-arrow-right"></i>Broneeri aeg</a>
                         </aside>
                     </div>
                     <div class="col-md-4 col-lg-4 col-xl-4">
                         <aside class="widget">
-                            <h3 class="widget_title">Newsletter Signup</h3>
+                            <h3 class="widget_title">Uudiskiri</h3>
                             <p>
-                                Enter your email address to get latest updates and offers from us.
+                                Sisesta oma e-posti aadress, et saada uudiseid ja eripakkumisi.
                             </p>
                             <form action="#" method="post">
                                 <div class="mc4wp-form-fields">
-                                    <input type="email" name="EMAIL" placeholder="Enter your email">
+                                    <input type="email" name="EMAIL" placeholder="Sinu e-post">
                                     <button type="submit"><i class="icofont-long-arrow-right"></i></button>
                                 </div>
                             </form>
@@ -931,18 +971,18 @@
                     </div>
                     <div class="col-md-4 col-lg-4 col-xl-3 offset-xl-1">
                         <aside class="widget">
-                            <h3 class="widget_title">Contact Us</h3>
+                            <h3 class="widget_title">Kontakt</h3>
                             <div class="info_box">
                                 <i class="icofont-location-pin"></i>
-                                <p>72 Main Drive,<br> Calibry, Florida 20304</p>
+                                <p>Tallinn,<br> Eesti</p>
                             </div>
                             <div class="info_box">
                                 <i class="icofont-phone"></i>
-                                <p>Helpline 24/7<br> +1 (700) 111 00 222</p>
+                                <p>Telefon<br> +372 5XX XXXX</p>
                             </div>
                             <div class="info_box">
                                 <i class="icofont-clock-time"></i>
-                                <p>Mon to Friday<br> 9:00 am to 7:00 pm</p>
+                                <p>E-R: 10:00 - 20:00<br> L: 10:00 - 18:00</p>
                             </div>
                         </aside>
                     </div>
@@ -953,7 +993,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>© 2021 <a href="http://themewar.com" target="_blank" rel="noopener">ThemeWar</a> . All Rights Reserved.</p>
+                        <p>© 2024 Blisse. Kõik õigused kaitstud.</p>
                     </div>
                     <div class="col-md-6">
                         <div class="copy_social">
@@ -1006,5 +1046,18 @@
 
         <script src="js/theme.js"></script>
         <!-- End Include All JS -->
+
+        <!-- Google Translate Script -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'et',
+                    includedLanguages: 'et,en,ru,fi,de,lv,lt',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </body>
 </html>
