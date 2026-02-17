@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+        <title>Salongihooldused - Blisse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Blisse salongihooldused - professionaalsed keha- ja näohooldused. LPG massaaž, krüolipolüüs, RF lifting ja palju muud.">
+        <meta name="keywords" content="kehahooldused, näohooldused, LPG massaaž, krüolipolüüs, RF lifting, ilusalong, Tallinn">
+
+        <!-- Start Include All CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="css/animate.css"/>
+        <link rel="stylesheet" href="css/icofont.css"/>
+        <link rel="stylesheet" href="css/nounicon.css"/>
+        <link rel="stylesheet" href="css/makeover-icon.css"/>
+        <link rel="stylesheet" href="css/nice-select.css"/>
+        <link rel="stylesheet" href="css/lightcase.css"/>
+        <link rel="stylesheet" href="css/preset.css"/>
+        <link rel="stylesheet" href="css/theme.css"/>
+        <link rel="stylesheet" href="css/responsive.css"/>
+        <!-- End Include All CSS -->
+
+        <!-- Favicon Icon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <style>
+            .treatment-card {
+                background: #fff;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+                transition: all 0.3s ease;
+            }
+            .treatment-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            }
+            .treatment-card img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+            .treatment-card .content {
+                padding: 25px;
+            }
+            .treatment-card h4 {
+                font-size: 22px;
+                margin-bottom: 10px;
+                color: #333;
+            }
+            .treatment-card .price {
+                font-size: 24px;
+                font-weight: 700;
+                color: #c9a86c;
+                margin-bottom: 15px;
+            }
+            .treatment-card .price .trial {
+                font-size: 16px;
+                color: #28a745;
+                display: block;
+            }
+            .treatment-card .price .original {
+                font-size: 14px;
+                text-decoration: line-through;
+                color: #999;
+                margin-left: 10px;
+            }
+            .treatment-card p {
+                color: #666;
+                margin-bottom: 15px;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            .treatment-card .benefits {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 20px 0;
+            }
+            .treatment-card .benefits li {
+                padding: 5px 0;
+                padding-left: 25px;
+                position: relative;
+                font-size: 14px;
+                color: #555;
+            }
+            .treatment-card .benefits li:before {
+                content: "\f00c";
+                font-family: "IcoFont";
+                position: absolute;
+                left: 0;
+                color: #c9a86c;
+            }
+            .treatment-card .btn-book {
+                display: inline-block;
+                padding: 12px 30px;
+                background: #c9a86c;
+                color: #fff;
+                border-radius: 30px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            .treatment-card .btn-book:hover {
+                background: #b8975b;
+                color: #fff;
+            }
+            .section-title-custom {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            .section-title-custom h2 {
+                font-size: 42px;
+                color: #333;
+                margin-bottom: 15px;
+            }
+            .section-title-custom p {
+                color: #666;
+                font-size: 16px;
+            }
+            .category-section {
+                padding: 80px 0;
+            }
+            .category-section.bg-light {
+                background: #f9f9f9;
+            }
+            .duration-info {
+                font-size: 13px;
+                color: #888;
+                margin-bottom: 10px;
+            }
+            .duration-info i {
+                margin-right: 5px;
+                color: #c9a86c;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Preloading -->
+        <div class="preloader text-center">
+            <div class="la-ball-scale-multiple la-2x">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Begin:: Header Section -->
+        <header class="header_01 isSticky">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 cusLogo">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Blisse"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 menu-col">
+                        <a href="javascript:void(0)" class="menu_btn"><i class="icofont-navigation-menu"></i></a>
+                        <nav class="mainMenu">
+                            <ul>
+                                <li><a href="index.html">Avaleht</a></li>
+                                <li><a href="about.html">Meist</a></li>
+                                <li class="current-menu-item menu-item-has-children">
+                                    <a href="javascript:void(0);">Hooldused</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="salongihooldused.html">Salongihooldused</a></li>
+                                        <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="gallery.html">Galerii</a></li>
+                                <li><a href="booking.html">Broneeri</a></li>
+                                <li><a href="contact.html">Kontakt</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 navCus">
+                        <div class="navAccess">
+                            <a href="javascript:void(0);" class="humBurger"><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End:: Header Section -->
+
+        <!-- popup sidebar widget -->
+        <section class="popup_sidebar_sec">
+            <div class="popup_sidebar_overlay"></div>
+            <div class="widget_area">
+                <a href="javascript:void(0);" class="widget_closer"><i class="icofont-close-line"></i></a>
+                <div class="center_align">
+                    <div class="about_widget_area">
+                        <div class="wd_logo">
+                            <a href="index.html"><img src="images/logo.png" alt="Blisse"/></a>
+                        </div>
+                        <p>
+                            Blisse - sinu ilu ja heaolu partner. Pakume professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.
+                        </p>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_call_1624888"></i>
+                            <h4>Helista meile</h4>
+                            <p>+372 5XX XXXX</p>
+                        </div>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_Email_485891"></i>
+                            <h4>Kirjuta meile</h4>
+                            <p>info@blisse.ee</p>
+                        </div>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_Address_1271842"></i>
+                            <h4>Aadress</h4>
+                            <p>Tallinn, Eesti</p>
+                        </div>
+                        <div class="social_item">
+                            <a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="icofont-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Begin:: Banner Section -->
+        <section class="page_banner">
+            <div class="layer_img move_anim animated">
+                <img src="images/bg/page_layer.png" alt=""/>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1">
+                        <h2 class="banner-title">Salongihooldused</h2>
+                        <p class="breadcrumbs"><a href="index.html">Avaleht</a><span>/</span>Salongihooldused</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Banner Section -->
+
+        <!-- Begin:: Kehahooldused Section -->
+        <section class="category-section">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Kehahooldused</h2>
+                    <p>Professionaalsed kehahooldused tselluliidi vähendamiseks, rasvapõletuseks ja naha pinguldamiseks</p>
+                </div>
+                <div class="row" id="kehahooldused-container">
+                    <!-- LPG Massaaž -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/treatments/lpg-massage.jpg" alt="LPG Massaaž">
+                            <div class="content">
+                                <h4>LPG Massaaž</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 60 min | 5-10 seanssi
+                                </div>
+                                <div class="price">
+                                    79€
+                                    <span class="trial">Proovihind: 29€</span>
+                                </div>
+                                <p>LPG massaaž on tõhus meetod tselluliidi vähendamiseks ja naha pinguldamiseks. Mehhaaniline vakuummassaaž stimuleerib vereringet ja lümfivoolu.</p>
+                                <ul class="benefits">
+                                    <li>Tselluliidi vähendamine</li>
+                                    <li>Naha pinguldamine</li>
+                                    <li>Vereringe parandamine</li>
+                                    <li>Lümfivoolu stimuleerimine</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Krüolipolüüs -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/treatments/cryolipolysis.jpg" alt="Krüolipolüüs">
+                            <div class="content">
+                                <h4>Krüolipolüüs</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 45-60 min | 1-3 seanssi
+                                </div>
+                                <div class="price">
+                                    99€
+                                    <span class="trial">Proovihind: 59€</span>
+                                </div>
+                                <p>Krüolipolüüs on mitteinvasiivne rasvakoe külmutamise meetod. Rasvarakud hävitatakse kontrollitud külmaga ilma operatsioonita.</p>
+                                <ul class="benefits">
+                                    <li>Lokaalne rasvapõletus</li>
+                                    <li>Püsiv tulemus</li>
+                                    <li>Valutu protseduur</li>
+                                    <li>Taastusaeg puudub</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ReShape Teraapia -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/treatments/hero-model-1.jpg" alt="ReShape Teraapia">
+                            <div class="content">
+                                <h4>ReShape Teraapia</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 30-45 min | 5-8 seanssi
+                                </div>
+                                <div class="price">33€</div>
+                                <p>ReShape teraapia kombineerib mikrovibratsioonid kolme tehnoloogiaga nahatoonuse ja kehakontuuri parandamiseks.</p>
+                                <ul class="benefits">
+                                    <li>Naha toonuse parandamine</li>
+                                    <li>Tselluliidi vähendamine</li>
+                                    <li>Sünnitusjärgne taastumine</li>
+                                    <li>Kehakontuuri modelleerimine</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cold Lipo Laser -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/treatments/hero-model-2.jpg" alt="Cold Lipo Laser">
+                            <div class="content">
+                                <h4>Cold Lipo Laser</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 30-45 min | 3-6 seanssi
+                                </div>
+                                <div class="price">79€</div>
+                                <p>Cold Lipo Laser kasutab madala taseme laserkiirgust rasvakudede lagundamiseks ja ainevahetuse kiirendamiseks.</p>
+                                <ul class="benefits">
+                                    <li>Rasvakoe vähendamine</li>
+                                    <li>Ainevahetuse kiirendamine</li>
+                                    <li>Mitteinvasiivne</li>
+                                    <li>Kiire protseduur</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kavitatsioon -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/treatments/hero-model-3.jpg" alt="Kavitatsioon">
+                            <div class="content">
+                                <h4>Kavitatsioon</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 30-45 min | 4-8 seanssi
+                                </div>
+                                <div class="price">69€</div>
+                                <p>Kavitatsioon on ultrahelipõhine meetod, mis tekitab mikromulle rasvakoes, aidates lagundada rasvarakke.</p>
+                                <ul class="benefits">
+                                    <li>Rasvakoe lagundamine</li>
+                                    <li>Tselluliidi vähendamine</li>
+                                    <li>Valutu protseduur</li>
+                                    <li>Kohene tulemus</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Kehahooldused Section -->
+
+        <!-- Begin:: Näohooldused Section -->
+        <section class="category-section bg-light">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Näohooldused</h2>
+                    <p>Professionaalsed näohooldused naha noorendamiseks, liftinguks ja kontuuri parandamiseks</p>
+                </div>
+                <div class="row" id="naohooldused-container">
+                    <!-- RF Lifting Näole -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/gallery/1.jpg" alt="RF Lifting Näole">
+                            <div class="content">
+                                <h4>RF Lifting Näole</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 45-60 min | 6-8 seanssi
+                                </div>
+                                <div class="price">79€</div>
+                                <p>RF lifting kasutab raadiosagedusenergiat kollageeni tootmise stimuleerimiseks ja naha pinguldamiseks.</p>
+                                <ul class="benefits">
+                                    <li>Kortsude vähendamine</li>
+                                    <li>Naha pinguldamine</li>
+                                    <li>Kollageeni tootmine</li>
+                                    <li>Näo kontuuri parandamine</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prestige ReShapeLift Näohooldus -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/gallery/2.jpg" alt="Prestige ReShapeLift Näohooldus">
+                            <div class="content">
+                                <h4>Prestige ReShapeLift</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 60-75 min | 4-6 seanssi
+                                </div>
+                                <div class="price">99€</div>
+                                <p>Premium näohooldus, mis kombineerib mitut tehnoloogiat sügavaks naha noorendamiseks ja liftinguks.</p>
+                                <ul class="benefits">
+                                    <li>Sügav noorendamine</li>
+                                    <li>Näo modelleerimine</li>
+                                    <li>Kortsude silumine</li>
+                                    <li>Naha elastsuse parandamine</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Krüolipolüüs Näole -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/gallery/3.jpg" alt="Krüolipolüüs Näole">
+                            <div class="content">
+                                <h4>Krüolipolüüs Näole</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 30-45 min | 2-4 seanssi
+                                </div>
+                                <div class="price">79€</div>
+                                <p>Näole kohandatud krüolipolüüs topeltlõua ja näokontuuride korrigeerimiseks.</p>
+                                <ul class="benefits">
+                                    <li>Topeltlõua vähendamine</li>
+                                    <li>Näokontuuri parandamine</li>
+                                    <li>Püsiv tulemus</li>
+                                    <li>Mitteinvasiivne</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HIFU Ultraheli Lifting -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/gallery/4.jpg" alt="HIFU Ultraheli Lifting">
+                            <div class="content">
+                                <h4>HIFU Ultraheli Lifting</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 60-90 min | 1-2 seanssi
+                                </div>
+                                <div class="price">199€</div>
+                                <p>Kõrge intensiivsusega fokuseeritud ultraheli sügavaks naha tõstmiseks ja pinguldamiseks.</p>
+                                <ul class="benefits">
+                                    <li>Sügav lifting</li>
+                                    <li>Pikaajaline tulemus</li>
+                                    <li>Naha pinguldamine</li>
+                                    <li>Kollageeni tootmine</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LPG Näohooldus -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/gallery/5.jpg" alt="LPG Näohooldus">
+                            <div class="content">
+                                <h4>LPG Näohooldus</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 30-45 min | 5-8 seanssi
+                                </div>
+                                <div class="price">69€</div>
+                                <p>LPG tehnoloogia näole - suurendab vereringet, parandab nahatoonust ja vähendab turset.</p>
+                                <ul class="benefits">
+                                    <li>Naha toonuse parandamine</li>
+                                    <li>Turse vähendamine</li>
+                                    <li>Vereringe parandamine</li>
+                                    <li>Näo värskendamine</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hammaste Valgendamine -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="treatment-card">
+                            <img src="images/gallery/6.jpg" alt="Hammaste Valgendamine">
+                            <div class="content">
+                                <h4>Hammaste Valgendamine</h4>
+                                <div class="duration-info">
+                                    <i class="icofont-clock-time"></i> 60 min | 1 seanss
+                                </div>
+                                <div class="price">99€</div>
+                                <p>Professionaalne hammaste valgendamine LED-valguse ja spetsiaalse geeli abil.</p>
+                                <ul class="benefits">
+                                    <li>Heledamad hambad</li>
+                                    <li>Kiire tulemus</li>
+                                    <li>Ohutu protseduur</li>
+                                    <li>Pikaajaline efekt</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Näohooldused Section -->
+
+        <!-- Begin:: CTA Section -->
+        <section class="cta_section" style="background: linear-gradient(135deg, #c9a86c 0%, #a68b5b 100%); padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3 style="color: #fff; font-size: 32px; margin-bottom: 10px;">Soovid paremat tulemust?</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin: 0;">Vaata meie soodsaid hoolduspakette ja säästa kuni 70%!</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-right text-center mt-4 mt-lg-0">
+                        <a href="hoolduste-paketid.html" class="btn" style="background: #fff; color: #c9a86c; padding: 15px 40px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block;">Vaata pakette</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: CTA Section -->
+
+        <!-- Begin:: Footer Section -->
+        <footer class="footer_01">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_foo">
+                                <a href="index.html" class="fooLogo"><img src="images/logo.png" alt="Blisse"/></a>
+                                <p>Blisse - sinu ilu ja heaolu partner. Pakume professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.</p>
+                                <div class="social_item">
+                                    <a href="#"><i class="icofont-facebook"></i></a>
+                                    <a href="#"><i class="icofont-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Menüü</h5>
+                                <ul>
+                                    <li><a href="index.html">Avaleht</a></li>
+                                    <li><a href="salongihooldused.html">Salongihooldused</a></li>
+                                    <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                    <li><a href="booking.html">Broneeri</a></li>
+                                    <li><a href="contact.html">Kontakt</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Hooldused</h5>
+                                <ul>
+                                    <li><a href="salongihooldused.html#kehahooldused">Kehahooldused</a></li>
+                                    <li><a href="salongihooldused.html#naohooldused">Näohooldused</a></li>
+                                    <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Kontakt</h5>
+                                <ul>
+                                    <li><i class="icofont-phone"></i> +372 5XX XXXX</li>
+                                    <li><i class="icofont-email"></i> info@blisse.ee</li>
+                                    <li><i class="icofont-location-pin"></i> Tallinn, Eesti</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p>&copy; 2024 Blisse. Kõik õigused kaitstud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End:: Footer Section -->
+
+        <!-- Start Include All JS -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/lightcase.js"></script>
+        <script src="js/theme.js"></script>
+        <!-- End Include All JS -->
+    </body>
+</html>

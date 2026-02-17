@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+        <title>Hoolduste Paketid - Blisse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Blisse hoolduste paketid - säästa kuni 70% võrreldes üksikhindadega. MEGA40, Talvekombo, Kiirsalenemine ja palju muud.">
+        <meta name="keywords" content="hoolduste paketid, kehahoolduspakett, näohoolduspakett, LPG pakett, krüolipolüüs, Tallinn">
+
+        <!-- Start Include All CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="css/animate.css"/>
+        <link rel="stylesheet" href="css/icofont.css"/>
+        <link rel="stylesheet" href="css/nounicon.css"/>
+        <link rel="stylesheet" href="css/makeover-icon.css"/>
+        <link rel="stylesheet" href="css/nice-select.css"/>
+        <link rel="stylesheet" href="css/lightcase.css"/>
+        <link rel="stylesheet" href="css/preset.css"/>
+        <link rel="stylesheet" href="css/theme.css"/>
+        <link rel="stylesheet" href="css/responsive.css"/>
+        <!-- End Include All CSS -->
+
+        <!-- Favicon Icon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <style>
+            .package-card {
+                background: #fff;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+                margin-bottom: 30px;
+                transition: all 0.4s ease;
+                position: relative;
+            }
+            .package-card:hover {
+                transform: translateY(-15px);
+                box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            }
+            .package-card.highlight {
+                border: 3px solid #c9a86c;
+            }
+            .package-card.highlight:before {
+                content: "POPULAARSEIM";
+                position: absolute;
+                top: 20px;
+                right: -35px;
+                background: #c9a86c;
+                color: #fff;
+                padding: 8px 40px;
+                font-size: 12px;
+                font-weight: 700;
+                transform: rotate(45deg);
+                z-index: 10;
+            }
+            .package-card img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+            .package-card .content {
+                padding: 30px;
+            }
+            .package-card h4 {
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: #333;
+            }
+            .package-card .price-box {
+                background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+                padding: 20px;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .package-card .price {
+                font-size: 42px;
+                font-weight: 700;
+                color: #c9a86c;
+                line-height: 1;
+            }
+            .package-card .original-price {
+                font-size: 18px;
+                text-decoration: line-through;
+                color: #999;
+                margin-left: 10px;
+            }
+            .package-card .savings {
+                display: inline-block;
+                background: #28a745;
+                color: #fff;
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            .package-card .duration {
+                font-size: 14px;
+                color: #888;
+                margin-bottom: 15px;
+            }
+            .package-card .duration i {
+                margin-right: 5px;
+                color: #c9a86c;
+            }
+            .package-card p {
+                color: #666;
+                margin-bottom: 20px;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+            .package-card .includes {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 25px 0;
+                background: #fafafa;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .package-card .includes li {
+                padding: 8px 0;
+                padding-left: 30px;
+                position: relative;
+                font-size: 14px;
+                color: #555;
+                border-bottom: 1px dashed #eee;
+            }
+            .package-card .includes li:last-child {
+                border-bottom: none;
+            }
+            .package-card .includes li:before {
+                content: "\f00c";
+                font-family: "IcoFont";
+                position: absolute;
+                left: 0;
+                color: #28a745;
+                font-size: 16px;
+            }
+            .package-card .btn-book {
+                display: block;
+                padding: 15px 30px;
+                background: linear-gradient(135deg, #c9a86c 0%, #b8975b 100%);
+                color: #fff;
+                border-radius: 30px;
+                text-decoration: none;
+                text-align: center;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+            .package-card .btn-book:hover {
+                background: linear-gradient(135deg, #b8975b 0%, #a68b5b 100%);
+                color: #fff;
+            }
+            .section-title-custom {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            .section-title-custom h2 {
+                font-size: 42px;
+                color: #333;
+                margin-bottom: 15px;
+            }
+            .section-title-custom p {
+                color: #666;
+                font-size: 16px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .category-section {
+                padding: 80px 0;
+            }
+            .category-section.bg-light {
+                background: #f9f9f9;
+            }
+            .category-badge {
+                display: inline-block;
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+            .category-badge.small {
+                background: #e8f5e9;
+                color: #2e7d32;
+            }
+            .category-badge.medium {
+                background: #fff3e0;
+                color: #ef6c00;
+            }
+            .category-badge.large {
+                background: #fce4ec;
+                color: #c2185b;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Preloading -->
+        <div class="preloader text-center">
+            <div class="la-ball-scale-multiple la-2x">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Begin:: Header Section -->
+        <header class="header_01 isSticky">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 cusLogo">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Blisse"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 menu-col">
+                        <a href="javascript:void(0)" class="menu_btn"><i class="icofont-navigation-menu"></i></a>
+                        <nav class="mainMenu">
+                            <ul>
+                                <li><a href="index.html">Avaleht</a></li>
+                                <li><a href="about.html">Meist</a></li>
+                                <li class="current-menu-item menu-item-has-children">
+                                    <a href="javascript:void(0);">Hooldused</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="salongihooldused.html">Salongihooldused</a></li>
+                                        <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="gallery.html">Galerii</a></li>
+                                <li><a href="booking.html">Broneeri</a></li>
+                                <li><a href="contact.html">Kontakt</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 navCus">
+                        <div class="navAccess">
+                            <a href="javascript:void(0);" class="humBurger"><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End:: Header Section -->
+
+        <!-- popup sidebar widget -->
+        <section class="popup_sidebar_sec">
+            <div class="popup_sidebar_overlay"></div>
+            <div class="widget_area">
+                <a href="javascript:void(0);" class="widget_closer"><i class="icofont-close-line"></i></a>
+                <div class="center_align">
+                    <div class="about_widget_area">
+                        <div class="wd_logo">
+                            <a href="index.html"><img src="images/logo.png" alt="Blisse"/></a>
+                        </div>
+                        <p>
+                            Blisse - sinu ilu ja heaolu partner. Pakume professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.
+                        </p>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_call_1624888"></i>
+                            <h4>Helista meile</h4>
+                            <p>+372 5XX XXXX</p>
+                        </div>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_Email_485891"></i>
+                            <h4>Kirjuta meile</h4>
+                            <p>info@blisse.ee</p>
+                        </div>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_Address_1271842"></i>
+                            <h4>Aadress</h4>
+                            <p>Tallinn, Eesti</p>
+                        </div>
+                        <div class="social_item">
+                            <a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="icofont-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Begin:: Banner Section -->
+        <section class="page_banner">
+            <div class="layer_img move_anim animated">
+                <img src="images/bg/page_layer.png" alt=""/>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1">
+                        <h2 class="banner-title">Hoolduste Paketid</h2>
+                        <p class="breadcrumbs"><a href="index.html">Avaleht</a><span>/</span>Hoolduste Paketid</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Banner Section -->
+
+        <!-- Begin:: Featured Package Section -->
+        <section class="category-section">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Meie Parimad Paketid</h2>
+                    <p>Säästa kuni 70% võrreldes üksikhindadega! Vali endale sobiv pakett ja alusta oma iluteekonda.</p>
+                </div>
+
+                <!-- MEGA40 - Featured -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <div class="package-card highlight">
+                            <img src="images/packages/mega40.jpg" alt="MEGA40 Kehahoolduspakett">
+                            <div class="content">
+                                <span class="category-badge large">Suurpakett</span>
+                                <h4>MEGA40 Kehahoolduspakett</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> Kestus: 3-4 kuud | 40 protseduuri
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">525€</span>
+                                    <span class="original-price">1800€</span>
+                                    <div class="savings">Säästad 1275€ (70%)</div>
+                                </div>
+                                <p>Meie kõige populaarsem pakett - 40 protseduuri uskumatult soodsa hinnaga! Vali ise hooldused vastavalt oma vajadustele. <strong>Hind protseduuri kohta ainult 13€!</strong></p>
+                                <ul class="includes">
+                                    <li>2x Krüolipolüüs</li>
+                                    <li>10x LPG massaaž</li>
+                                    <li>2x ReShape teraapia</li>
+                                    <li>26x vabalt valitav hooldus</li>
+                                    <li>Tasuta konsultatsioon</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri MEGA40 pakett</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Begin:: Suured Paketid Section -->
+        <section class="category-section bg-light">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Suured Paketid</h2>
+                    <p>Maksimaalse tulemuse saavutamiseks - pikaajalised ja põhjalikud hoolduskuurid</p>
+                </div>
+                <div class="row">
+                    <!-- Rasvapõletuse Superpakett -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/treatments/cryolipolysis.jpg" alt="Rasvapõletuse Superpakett">
+                            <div class="content">
+                                <span class="category-badge large">Suurpakett</span>
+                                <h4>Rasvapõletuse Superpakett</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 2-3 kuud | 25 protseduuri
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">599€</span>
+                                    <span class="original-price">1250€</span>
+                                    <div class="savings">Säästad 651€ (52%)</div>
+                                </div>
+                                <p>Maksimaalne rasvapõletus mitme tehnoloogia kombinatsiooniga.</p>
+                                <ul class="includes">
+                                    <li>5x Krüolipolüüs</li>
+                                    <li>10x LPG massaaž</li>
+                                    <li>5x Cold Lipo Laser</li>
+                                    <li>5x Kavitatsioon</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kolmetunnine Superhooldus -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/packages/superhooldus.jpg" alt="Kolmetunnine Superhooldus">
+                            <div class="content">
+                                <span class="category-badge large">Suurpakett</span>
+                                <h4>Kolmetunnine Superhooldus</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 3 tundi | 1 seanss
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">199€</span>
+                                    <span class="original-price">350€</span>
+                                    <div class="savings">Säästad 151€ (43%)</div>
+                                </div>
+                                <p>Intensiivne kolmetunnine hooldus, mis kombineerib mitut tehnoloogiat ühes seanssis.</p>
+                                <ul class="includes">
+                                    <li>Krüolipolüüs</li>
+                                    <li>LPG massaaž</li>
+                                    <li>ReShape teraapia</li>
+                                    <li>Cold Lipo Laser</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Begin:: Keskmised Paketid Section -->
+        <section class="category-section">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Keskmised Paketid</h2>
+                    <p>Optimaalne valik hea tulemuse saavutamiseks mõõduka investeeringuga</p>
+                </div>
+                <div class="row">
+                    <!-- LPG Massaaž 10x -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/treatments/lpg-massage.jpg" alt="LPG Massaaž 10x">
+                            <div class="content">
+                                <span class="category-badge medium">Keskmine pakett</span>
+                                <h4>LPG Massaaž 10x</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 5-6 nädalat | 10 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">299€</span>
+                                    <span class="original-price">790€</span>
+                                    <div class="savings">Säästad 491€ (62%)</div>
+                                </div>
+                                <p>Kümne LPG massaaži pakett tugevamate tulemuste saavutamiseks.</p>
+                                <ul class="includes">
+                                    <li>10x LPG massaaž</li>
+                                    <li>Konsultatsioon</li>
+                                    <li>Toitumissoovitused</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Talvekombo -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/packages/superhooldus.jpg" alt="Talvekombo">
+                            <div class="content">
+                                <span class="category-badge medium">Keskmine pakett</span>
+                                <h4>Talvekombo</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 6-8 nädalat | 15 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">399€</span>
+                                    <span class="original-price">725€</span>
+                                    <div class="savings">Säästad 326€ (45%)</div>
+                                </div>
+                                <p>Täielik kehahoolduspakett talveks - LPG, krüolipolüüs ja ReShape teraapia.</p>
+                                <ul class="includes">
+                                    <li>5x LPG massaaž</li>
+                                    <li>2x Krüolipolüüs</li>
+                                    <li>8x ReShape teraapia</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Best Body Combo -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/treatments/hero-model-2.jpg" alt="Best Body Combo">
+                            <div class="content">
+                                <span class="category-badge medium">Keskmine pakett</span>
+                                <h4>Best Body Combo</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 6-8 nädalat | 12 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">349€</span>
+                                    <span class="original-price">630€</span>
+                                    <div class="savings">Säästad 281€ (45%)</div>
+                                </div>
+                                <p>Parim kehakontuuri pakett - mitme tehnoloogia kombinatsioon ideaalse tulemuse saavutamiseks.</p>
+                                <ul class="includes">
+                                    <li>4x LPG massaaž</li>
+                                    <li>2x Krüolipolüüs</li>
+                                    <li>6x ReShape teraapia</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kiirsalenemine -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/treatments/hero-model-3.jpg" alt="Kiirsalenemine">
+                            <div class="content">
+                                <span class="category-badge medium">Keskmine pakett</span>
+                                <h4>Kiirsalenemine</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 6-8 nädalat | 10 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">359€</span>
+                                    <span class="original-price">700€</span>
+                                    <div class="savings">Säästad 341€ (49%)</div>
+                                </div>
+                                <p>Intensiivne pakett kiireks kaalulanguseks ja kehakontuuri parandamiseks.</p>
+                                <ul class="includes">
+                                    <li>Cold Lipo Laser</li>
+                                    <li>Kavitatsioon</li>
+                                    <li>Krüolipolüüs</li>
+                                    <li>LPG massaaž</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5x LPG Näohooldus + 5x ReShape Näole -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/gallery/1.jpg" alt="Näohooldus Pakett">
+                            <div class="content">
+                                <span class="category-badge medium">Näohooldus</span>
+                                <h4>5x LPG + 5x ReShape Näole</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 5-6 nädalat | 10 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">349€</span>
+                                    <span class="original-price">510€</span>
+                                    <div class="savings">Säästad 161€ (32%)</div>
+                                </div>
+                                <p>Kompleksne näohoolduspakett naha noorendamiseks ja kontuuri parandamiseks.</p>
+                                <ul class="includes">
+                                    <li>5x LPG näohooldus</li>
+                                    <li>5x ReShape näole</li>
+                                    <li>Konsultatsioon</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Täiuslik Näokontuurimine -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/gallery/2.jpg" alt="Täiuslik Näokontuurimine">
+                            <div class="content">
+                                <span class="category-badge medium">Näohooldus</span>
+                                <h4>Täiuslik Näokontuurimine</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 4-6 nädalat | 6 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">299€</span>
+                                    <span class="original-price">475€</span>
+                                    <div class="savings">Säästad 176€ (37%)</div>
+                                </div>
+                                <p>Premium pakett näokontuuride modelleerimiseks ja naha pinguldamiseks.</p>
+                                <ul class="includes">
+                                    <li>4x RF Lifting</li>
+                                    <li>2x Krüolipolüüs näole</li>
+                                    <li>Konsultatsioon</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Begin:: Väikesed Paketid Section -->
+        <section class="category-section bg-light">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Väikesed Paketid</h2>
+                    <p>Suurepärane algus - proovi ja veendu tulemuses!</p>
+                </div>
+                <div class="row">
+                    <!-- LPG Massaaž 5x -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/treatments/lpg-massage.jpg" alt="LPG Massaaž 5x">
+                            <div class="content">
+                                <span class="category-badge small">Väike pakett</span>
+                                <h4>LPG Massaaž 5x</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 3-4 nädalat | 5 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">149€</span>
+                                    <span class="original-price">395€</span>
+                                    <div class="savings">Säästad 246€ (62%)</div>
+                                </div>
+                                <p>Viie LPG massaaži pakett tselluliidi ja kehakontuuri parandamiseks.</p>
+                                <ul class="includes">
+                                    <li>5x LPG massaaž</li>
+                                    <li>Konsultatsioon</li>
+                                    <li>Individuaalne plaan</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Topeltmõju -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/treatments/hero-model-1.jpg" alt="Topeltmõju">
+                            <div class="content">
+                                <span class="category-badge small">Väike pakett</span>
+                                <h4>Topeltmõju 5x LPG + 5x ReShape</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 5-6 nädalat | 10 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">249€</span>
+                                    <span class="original-price">560€</span>
+                                    <div class="savings">Säästad 311€ (56%)</div>
+                                </div>
+                                <p>Kombineeritud pakett maksimaalse tulemuse saavutamiseks - LPG ja ReShape teraapia koos.</p>
+                                <ul class="includes">
+                                    <li>5x LPG massaaž</li>
+                                    <li>5x ReShape teraapia</li>
+                                    <li>Konsultatsioon</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cold Lipo + Krüo Kombo -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="package-card">
+                            <img src="images/treatments/cryolipolysis.jpg" alt="Cold Lipo + Krüo Kombo">
+                            <div class="content">
+                                <span class="category-badge small">Väike pakett</span>
+                                <h4>Cold Lipo + Krüo Kombo</h4>
+                                <div class="duration">
+                                    <i class="icofont-clock-time"></i> 4-6 nädalat | 4 seanssi
+                                </div>
+                                <div class="price-box">
+                                    <span class="price">199€</span>
+                                    <span class="original-price">356€</span>
+                                    <div class="savings">Säästad 157€ (44%)</div>
+                                </div>
+                                <p>Kahe võimsa rasvapõletustehnoloogia kombinatsioon kiireks tulemuseks.</p>
+                                <ul class="includes">
+                                    <li>2x Cold Lipo Laser</li>
+                                    <li>2x Krüolipolüüs</li>
+                                    <li>Konsultatsioon</li>
+                                </ul>
+                                <a href="booking.html" class="btn-book">Broneeri aeg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Begin:: CTA Section -->
+        <section class="cta_section" style="background: linear-gradient(135deg, #c9a86c 0%, #a68b5b 100%); padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3 style="color: #fff; font-size: 32px; margin-bottom: 10px;">Ei leia sobivat paketti?</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin: 0;">Vaata meie üksikhooldusi või võta meiega ühendust personaalse pakkumise jaoks!</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-right text-center mt-4 mt-lg-0">
+                        <a href="salongihooldused.html" class="btn" style="background: #fff; color: #c9a86c; padding: 15px 40px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block; margin-right: 10px;">Üksikhooldused</a>
+                        <a href="contact.html" class="btn" style="background: transparent; color: #fff; border: 2px solid #fff; padding: 13px 30px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block;">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: CTA Section -->
+
+        <!-- Begin:: Footer Section -->
+        <footer class="footer_01">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_foo">
+                                <a href="index.html" class="fooLogo"><img src="images/logo.png" alt="Blisse"/></a>
+                                <p>Blisse - sinu ilu ja heaolu partner. Pakume professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.</p>
+                                <div class="social_item">
+                                    <a href="#"><i class="icofont-facebook"></i></a>
+                                    <a href="#"><i class="icofont-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Menüü</h5>
+                                <ul>
+                                    <li><a href="index.html">Avaleht</a></li>
+                                    <li><a href="salongihooldused.html">Salongihooldused</a></li>
+                                    <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                    <li><a href="booking.html">Broneeri</a></li>
+                                    <li><a href="contact.html">Kontakt</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Hooldused</h5>
+                                <ul>
+                                    <li><a href="salongihooldused.html#kehahooldused">Kehahooldused</a></li>
+                                    <li><a href="salongihooldused.html#naohooldused">Näohooldused</a></li>
+                                    <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Kontakt</h5>
+                                <ul>
+                                    <li><i class="icofont-phone"></i> +372 5XX XXXX</li>
+                                    <li><i class="icofont-email"></i> info@blisse.ee</li>
+                                    <li><i class="icofont-location-pin"></i> Tallinn, Eesti</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p>&copy; 2024 Blisse. Kõik õigused kaitstud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End:: Footer Section -->
+
+        <!-- Start Include All JS -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/lightcase.js"></script>
+        <script src="js/theme.js"></script>
+        <!-- End Include All JS -->
+    </body>
+</html>
