@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxurious Beauty Store Design System */
+
+@layer base {
+  :root {
+    /* Base colors - Warm, sophisticated palette */
+    --background: 350 20% 99%;
+    --foreground: 345 30% 10%;
+
+    /* Card styling */
+    --card: 350 30% 98%;
+    --card-foreground: 345 30% 15%;
+
+    /* Popover styling */
+    --popover: 350 25% 98%;
+    --popover-foreground: 345 30% 10%;
+
+    /* Primary - Elegant rose gold */
+    --primary: 345 65% 55%;
+    --primary-foreground: 350 20% 99%;
+    --primary-glow: 345 75% 70%;
+
+    /* Secondary - Soft champagne */
+    --secondary: 35 45% 92%;
+    --secondary-foreground: 345 30% 15%;
+
+    /* Muted tones */
+    --muted: 345 20% 95%;
+    --muted-foreground: 345 15% 55%;
+
+    /* Accent - Warm gold */
+    --accent: 40 85% 85%;
+    --accent-foreground: 345 30% 15%;
+
+    /* Beauty brand colors */
+    --beauty-rose: 330 65% 75%;
+    --beauty-coral: 15 85% 70%;
+    --beauty-nude: 25 35% 85%;
+    --beauty-bronze: 30 45% 60%;
+    --beauty-border: 20 70% 85%; /* lighter pink tone */
+    --beauty-pink: 340 55% 79%; /* #e6afc1 - main CTA pink */
+    --beauty-teal: 188 32% 58%; /* #72b0b8 - CTA buttons */
+    --beauty-peach: 18 52% 69%; /* #d79e8b - navigation border */
+
+    /* Destructive */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 350 20% 99%;
+
+    /* Borders and inputs */
+    --border: 345 25% 90%;
+    --input: 345 25% 90%;
+    --ring: 345 65% 55%;
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Gradients for luxury feel */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(345 65% 55%), hsl(15 85% 70%), hsl(40 85% 85%));
+    --gradient-card: linear-gradient(145deg, hsl(350 30% 98%), hsl(345 25% 96%));
+    --gradient-beauty: linear-gradient(120deg, hsl(var(--beauty-rose)), hsl(var(--beauty-coral)));
+
+    /* Shadows for depth */
+    --shadow-beauty: 0 10px 30px -5px hsl(345 65% 55% / 0.2);
+    --shadow-card: 0 4px 15px -2px hsl(345 30% 15% / 0.1);
+    --shadow-glow: 0 0 25px hsl(var(--primary-glow) / 0.3);
+
+    /* Animations */
+    --transition-beauty: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-hover: all 0.3s ease;
+
+    /* Sidebar (keeping existing) */
+    --sidebar-background: 350 25% 97%;
+    --sidebar-foreground: 345 30% 20%;
+    --sidebar-primary: 345 65% 55%;
+    --sidebar-primary-foreground: 350 20% 99%;
+    --sidebar-accent: 345 20% 94%;
+    --sidebar-accent-foreground: 345 30% 15%;
+    --sidebar-border: 345 25% 88%;
+    --sidebar-ring: 345 65% 55%;
+  }
+
+  .dark {
+    /* Dark mode for sophisticated evening beauty look */
+    --background: 345 30% 8%;
+    --foreground: 350 20% 95%;
+
+    --card: 345 25% 12%;
+    --card-foreground: 350 15% 90%;
+
+    --popover: 345 25% 10%;
+    --popover-foreground: 350 15% 95%;
+
+    --primary: 345 75% 65%;
+    --primary-foreground: 345 30% 8%;
+    --primary-glow: 345 85% 75%;
+
+    --secondary: 345 20% 18%;
+    --secondary-foreground: 350 15% 85%;
+
+    --muted: 345 15% 15%;
+    --muted-foreground: 345 10% 65%;
+
+    --accent: 40 75% 75%;
+    --accent-foreground: 345 30% 8%;
+
+    --beauty-rose: 330 70% 65%;
+    --beauty-coral: 15 80% 65%;
+    --beauty-nude: 25 25% 75%;
+    --beauty-bronze: 30 40% 55%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 350 15% 95%;
+
+    --border: 345 20% 20%;
+    --input: 345 20% 20%;
+    --ring: 345 75% 65%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(345 75% 45%), hsl(15 75% 55%), hsl(40 75% 65%));
+    --gradient-card: linear-gradient(145deg, hsl(345 25% 12%), hsl(345 20% 15%));
+    --shadow-beauty: 0 10px 30px -5px hsl(345 75% 35% / 0.3);
+    
+    --sidebar-background: 345 25% 10%;
+    --sidebar-foreground: 350 15% 85%;
+    --sidebar-primary: 345 75% 65%;
+    --sidebar-primary-foreground: 345 30% 8%;
+    --sidebar-accent: 345 15% 15%;
+    --sidebar-accent-foreground: 350 15% 85%;
+    --sidebar-border: 345 20% 18%;
+    --sidebar-ring: 345 75% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-medium antialiased font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .beauty-gradient {
+    background: var(--gradient-beauty);
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .beauty-shadow {
+    box-shadow: var(--shadow-beauty);
+  }
+  
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .beauty-transition {
+    transition: var(--transition-beauty);
+  }
+
+  .heading-glow {
+    text-shadow: 0 2px 8px hsl(var(--beauty-teal) / 0.3), 0 1px 2px hsl(var(--beauty-teal) / 0.2);
+  }
+
+  .heading-decorated {
+    position: relative;
+    display: inline-block;
+  }
+
+  .heading-decorated::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, hsl(var(--beauty-teal)), transparent);
+    border-radius: 2px;
+  }
+}

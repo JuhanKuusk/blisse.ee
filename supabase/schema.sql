@@ -180,3 +180,52 @@ INSERT INTO blisse_packages (slug, name, description, price, regular_price, dura
 ('rasvapoletuse-superpakett', 'Rasvapõletuse Superpakett', 'Maksimaalne rasvapõletus mitme tehnoloogia kombinatsiooniga.', 599, 1250, '2-3 kuud', 'images/treatments/cryolipolysis.jpg', ARRAY['5x Krüolipolüüs', '10x LPG massaaž', '5x Cold Lipo Laser', '5x Kavitatsioon'], 'large', false, 2),
 ('kolmetunnine-superhooldus', 'Kolmetunnine Superhooldus', 'Intensiivne kolmetunnine hooldus, mis kombineerib mitut tehnoloogiat ühes seanssis.', 199, 350, '3 tundi', 'images/packages/superhooldus.jpg', ARRAY['Krüolipolüüs', 'LPG massaaž', 'ReShape teraapia', 'Cold Lipo Laser'], 'large', false, 3)
 ON CONFLICT (slug) DO NOTHING;
+
+-- ============================================
+-- BLISSE_PRODUCTS (E-pood tooted) Table
+-- Physical products from WooCommerce
+-- ============================================
+CREATE TABLE IF NOT EXISTS blisse_products (
+    id SERIAL PRIMARY KEY,
+    wc_id INTEGER UNIQUE NOT NULL,  -- WooCommerce product ID
+    name VARCHAR(500) NOT NULL,
+    slug VARCHAR(200) UNIQUE NOT NULL,
+    description TEXT,
+    short_description TEXT,
+    price DECIMAL(10,2),
+    regular_price DECIMAL(10,2),
+    sale_price DECIMAL(10,2),
+    image_url VARCHAR(500),
+    categories TEXT[],
+    sku VARCHAR(100),
+    stock_quantity INTEGER,
+    stock_status VARCHAR(50) DEFAULT 'instock',
+    status VARCHAR(50) DEFAULT 'publish',
+    type VARCHAR(50) DEFAULT 'simple',  -- simple, variable
+    virtual BOOLEAN DEFAULT false,
+    benefits JSONB,
+    full_ingredients TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Indexes for blisse_products
+CREATE INDEX IF NOT EXISTS idx_blisse_products_status ON blisse_products(status);
+CREATE INDEX IF NOT EXISTS idx_blisse_products_virtual ON blisse_products(virtual);
+CREATE INDEX IF NOT EXISTS idx_blisse_products_wc_id ON blisse_products(wc_id);
+
+-- Updated_at trigger for blisse_products
+DROP TRIGGER IF EXISTS update_blisse_products_updated_at ON blisse_products;
+CREATE TRIGGER update_blisse_products_updated_at
+    BEFORE UPDATE ON blisse_products
+    FOR EACH ROW
+    EXECUTE FUNCTION blisse_update_updated_at_column();
+
+-- Row Level Security for blisse_products
+ALTER TABLE blisse_products ENABLE ROW LEVEL SECURITY;
+
+-- Public read access for published products
+DROP POLICY IF EXISTS "Allow public read access to blisse_products" ON blisse_products;
+CREATE POLICY "Allow public read access to blisse_products"
+    ON blisse_products FOR SELECT
+    USING (status = 'publish');

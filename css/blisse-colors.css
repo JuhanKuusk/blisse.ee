@@ -1,0 +1,200 @@
+/*
+ * Blisse.ee Custom Color Palette
+ * Primary:   #b98b74 (warm brown/terracotta)
+ * Secondary: #ddbea9 (soft beige)
+ * Light:     #fbe9d3 (cream)
+ * Accent 1:  #d3c7af (sage beige)
+ * Accent 2:  #b7b8a5 (olive gray)
+ * Accent 3:  #d5b2a8 (dusty rose)
+ * Accent 4:  #f7cac1 (soft pink)
+ * Neutral:   #e2ddda (warm gray)
+ */
+
+:root {
+    --blisse-primary: #b98b74;
+    --blisse-secondary: #ddbea9;
+    --blisse-light: #fbe9d3;
+    --blisse-accent-1: #d3c7af;
+    --blisse-accent-2: #b7b8a5;
+    --blisse-accent-3: #d5b2a8;
+    --blisse-accent-4: #f7cac1;
+    --blisse-neutral: #e2ddda;
+}
+
+/* Override primary color */
+.colorPrimary {
+    color: #b98b74 !important;
+}
+
+/* Buttons */
+.mo_btn:hover {
+    background: #b98b74;
+    color: #FFF;
+}
+.mo_btn i {
+    background: #b98b74;
+}
+.mo_btn:hover i {
+    color: #b98b74;
+}
+.mo_reverse {
+    background: #b98b74;
+}
+.mo_reverse i {
+    color: #b98b74;
+}
+.mo_reverse:hover i {
+    background: #b98b74;
+}
+
+/* Section Title */
+.sectionTitle h5 {
+    color: #b98b74;
+}
+
+/* Links */
+a:hover {
+    color: #b98b74;
+}
+
+/* Preloader */
+.la-ball-scale-multiple {
+    color: #b98b74;
+}
+
+/* Service Items */
+.serviceItem_01 .ib_box svg g {
+    fill: #ddbea9;
+}
+.serviceItem_01:hover .ib_box svg g {
+    fill: #b98b74;
+}
+.serviceItem_01:hover .bg_icon i,
+.serviceItem_01:hover .ib_box > i {
+    color: #b98b74;
+}
+
+/* Package Items */
+.packageItem_01.isHighlighted {
+    background: linear-gradient(135deg, #b98b74 0%, #d5b2a8 100%);
+}
+.packageItem_01 .pi_price h2 {
+    color: #b98b74;
+}
+
+/* Icon Boxes */
+.icon_box_01:hover i,
+.icon_box_02:hover i,
+.icon_box_03:hover i {
+    color: #b98b74;
+    border-color: #b98b74;
+}
+
+/* About Section */
+.about_01 .ab_btn a:hover {
+    background: #b98b74;
+    border-color: #b98b74;
+}
+
+/* Testimonial */
+.tw_testiSlider .testimonial_01:before {
+    color: #f7cac1;
+}
+
+/* Price Table */
+.priceItem_01.active,
+.priceItem_01:hover {
+    background: #b98b74;
+}
+
+/* Footer */
+.footer_01 .mc4wp-form-fields button {
+    background: #b98b74;
+}
+.footer_01 .mc4wp-form-fields button:hover {
+    background: #d5b2a8;
+}
+
+/* Blog */
+.blogItem_01 .readMore:hover {
+    color: #b98b74;
+}
+
+/* Appointment Form */
+.appointmentForm_01 {
+    background: linear-gradient(135deg, #fbe9d3 0%, #e2ddda 100%);
+}
+.appointmentForm_01 button[type="submit"] {
+    background: #b98b74;
+}
+.appointmentForm_01 button[type="submit"]:hover {
+    background: #d5b2a8;
+}
+
+/* Gallery Hover */
+.galleryItem_01:hover .gi_overlay {
+    background: rgba(185, 139, 116, 0.9);
+}
+
+/* Team Hover */
+.teamItem_01:hover .ti_overlay {
+    background: rgba(185, 139, 116, 0.9);
+}
+
+/* Slider Round Animation */
+.round_anim {
+    background: #f7cac1;
+}
+.round_anim:before {
+    border-color: #ddbea9;
+}
+.round_anim:after {
+    border-color: #d5b2a8;
+}
+
+/* Header Active Menu */
+.mainMenu ul li.current-menu-item > a,
+.mainMenu ul li:hover > a {
+    color: #b98b74;
+}
+
+/* Back to Top */
+#backtotop {
+    background: #b98b74;
+}
+#backtotop:hover {
+    background: #d5b2a8;
+}
+
+/* Form Focus */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #b98b74 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #b98b74;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d5b2a8;
+}
+
+/* Shadows animation override */
+@keyframes shadows {
+    0% {
+        box-shadow: 0 0 0 0 rgba(185, 139, 116, .08), 0 0 0 30px rgba(185, 139, 116, .08), 0 0 0 50px rgba(185, 139, 116, .08);
+    }
+    100% {
+        box-shadow: 0 0 0 30px rgba(185, 139, 116, .08), 0 0 0 50px rgba(185, 139, 116, .08), 0 0 0 70px rgba(185, 139, 116, 0);
+    }
+}
+@keyframes shadows_2 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(185, 139, 116, .2), 0 0 0 30px rgba(185, 139, 116, .2), 0 0 0 50px rgba(185, 139, 116, .2);
+    }
+    100% {
+        box-shadow: 0 0 0 30px rgba(185, 139, 116, .2), 0 0 0 50px rgba(185, 139, 116, .2), 0 0 0 70px rgba(185, 139, 116, 0);
+    }
+}

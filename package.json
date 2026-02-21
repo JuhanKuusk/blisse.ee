@@ -1,9 +1,11 @@
 {
   "name": "blisse",
   "version": "1.0.0",
-  "description": "",
+  "type": "module",
+  "description": "Blisse.ee beauty salon website",
   "main": "index.js",
   "scripts": {
+    "sync-products": "node scripts/sync-products.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/JuhanKuusk/blisse.ee#readme",
   "dependencies": {
-    "@supabase/supabase-js": "^2.96.0"
+    "@supabase/supabase-js": "^2.96.0",
+    "node-fetch": "^3.3.2"
   }
 }

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+        <title>Hinnakiri - Blisse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Blisse hinnakiri - kõik keha- ja näohoolduste hinnad. LPG massaaž, krüolipolüüs, RF lifting, kavitatsioon ja palju muud.">
+        <meta name="keywords" content="hinnakiri, kehahooldused hinnad, LPG massaaž hind, krüolipolüüs hind, ilusalong Tallinn">
+
+        <!-- Start Include All CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="css/animate.css"/>
+        <link rel="stylesheet" href="css/icofont.css"/>
+        <link rel="stylesheet" href="css/nounicon.css"/>
+        <link rel="stylesheet" href="css/makeover-icon.css"/>
+        <link rel="stylesheet" href="css/nice-select.css"/>
+        <link rel="stylesheet" href="css/lightcase.css"/>
+        <link rel="stylesheet" href="css/preset.css"/>
+        <link rel="stylesheet" href="css/theme.css"/>
+        <link rel="stylesheet" href="css/responsive.css"/>
+
+        <!-- Blisse Custom Colors -->
+        <link rel="stylesheet" href="css/blisse-colors.css"/>
+        <!-- End Include All CSS -->
+
+        <!-- Favicon Icon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <!-- Google Translate Widget Styles -->
+        <style>
+            .google-translate-container {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 9999;
+                background: rgba(255,255,255,0.95);
+                padding: 5px 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            .goog-te-gadget { font-family: inherit !important; }
+            .goog-te-gadget-simple { background-color: transparent !important; border: none !important; padding: 0 !important; font-size: 12px !important; }
+            .goog-te-banner-frame { display: none !important; }
+            body { top: 0 !important; }
+            @media (max-width: 768px) {
+                .google-translate-container { top: auto; bottom: 70px; right: 10px; }
+            }
+        </style>
+
+        <style>
+            .price-section {
+                padding: 80px 0;
+            }
+            .price-section.bg-light {
+                background: #f9f6f2;
+            }
+            .price-section.bg-cream {
+                background: #fbe9d3;
+            }
+            .section-title-custom {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            .section-title-custom h2 {
+                font-size: 42px;
+                color: #333;
+                margin-bottom: 15px;
+            }
+            .section-title-custom p {
+                color: #666;
+                font-size: 16px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            .price-table {
+                background: #fff;
+                border-radius: 20px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+            .price-table-header {
+                background: linear-gradient(135deg, #b98b74 0%, #d5b2a8 100%);
+                color: #fff;
+                padding: 25px 30px;
+            }
+            .price-table-header h3 {
+                font-size: 28px;
+                margin: 0;
+                color: #fff;
+            }
+            .price-table-header p {
+                margin: 10px 0 0;
+                opacity: 0.9;
+                font-size: 14px;
+            }
+            .price-table-body {
+                padding: 10px 0;
+            }
+            .price-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 18px 30px;
+                border-bottom: 1px solid #f0f0f0;
+                transition: all 0.3s ease;
+            }
+            .price-row:last-child {
+                border-bottom: none;
+            }
+            .price-row:hover {
+                background: #fbe9d3;
+            }
+            .price-row .service-name {
+                font-size: 16px;
+                color: #333;
+                font-weight: 500;
+                flex: 1;
+            }
+            .price-row .service-name small {
+                display: block;
+                font-size: 13px;
+                color: #888;
+                font-weight: 400;
+                margin-top: 3px;
+            }
+            .price-row .price {
+                font-size: 22px;
+                font-weight: 700;
+                color: #b98b74;
+                min-width: 80px;
+                text-align: right;
+            }
+            .package-highlight {
+                background: linear-gradient(135deg, #fbe9d3, #fff);
+                border: 2px solid #b98b74;
+            }
+            .package-highlight .price-row:hover {
+                background: #fff;
+            }
+            .info-box {
+                background: linear-gradient(135deg, #b98b74, #d5b2a8);
+                color: #fff;
+                border-radius: 15px;
+                padding: 30px;
+                margin-bottom: 30px;
+            }
+            .info-box h4 {
+                color: #fff;
+                margin-bottom: 15px;
+            }
+            .info-box p {
+                margin: 0;
+                opacity: 0.9;
+            }
+            .info-box ul {
+                list-style: none;
+                padding: 0;
+                margin: 15px 0 0;
+            }
+            .info-box ul li {
+                padding: 8px 0;
+                padding-left: 25px;
+                position: relative;
+            }
+            .info-box ul li:before {
+                content: "\2713";
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+            }
+            @media (max-width: 768px) {
+                .price-row {
+                    flex-wrap: wrap;
+                    padding: 15px 20px;
+                }
+                .price-row .service-name {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                .price-row .price {
+                    text-align: right;
+                }
+                .price-table-header {
+                    padding: 20px;
+                }
+                .price-table-header h3 {
+                    font-size: 22px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Google Translate Widget -->
+        <div class="google-translate-container">
+            <div id="google_translate_element"></div>
+        </div>
+
+        <!-- Preloading -->
+        <div class="preloader text-center">
+            <div class="la-ball-scale-multiple la-2x">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Begin:: Header Section -->
+        <header class="header_01 isSticky">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 cusLogo">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/blisse-logo.png" alt="Blisse"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 menu-col">
+                        <a href="javascript:void(0)" class="menu_btn"><i class="icofont-navigation-menu"></i></a>
+                        <nav class="mainMenu">
+                            <ul>
+                                <li><a href="index.html">Avaleht</a></li>
+                                <li><a href="meist.html">Meist</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="javascript:void(0);">Hooldused</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="salongihooldused.html">Salongihooldused</a></li>
+                                        <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                    </ul>
+                                </li>
+                                <li class="current-menu-item"><a href="hinnakiri.html">Hinnakiri</a></li>
+                                <li><a href="galerii.html">Galerii</a></li>
+                                <li><a href="booking.html">Broneeri</a></li>
+                                <li><a href="kontakt.html">Kontakt</a></li>
+                                <li><a href="/epood/">E-pood</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 navCus">
+                        <div class="navAccess">
+                            <a href="javascript:void(0);" class="humBurger"><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End:: Header Section -->
+
+        <!-- popup sidebar widget -->
+        <section class="popup_sidebar_sec">
+            <div class="popup_sidebar_overlay"></div>
+            <div class="widget_area">
+                <a href="javascript:void(0);" class="widget_closer"><i class="icofont-close-line"></i></a>
+                <div class="center_align">
+                    <div class="about_widget_area">
+                        <div class="wd_logo">
+                            <a href="index.html"><img src="images/blisse-logo.png" alt="Blisse"/></a>
+                        </div>
+                        <p>Blisse - sinu ilu ja heaolu partner. Pakume professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.</p>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_call_1624888"></i>
+                            <h4>Helista meile</h4>
+                            <p>+372 515 1566</p>
+                        </div>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_Email_485891"></i>
+                            <h4>Kirjuta meile</h4>
+                            <p>info@blisse.ee</p>
+                        </div>
+                        <div class="icon_box_04">
+                            <i class="noun-noun_Address_1271842"></i>
+                            <h4>Aadress</h4>
+                            <p>Tallinn, Eesti</p>
+                        </div>
+                        <div class="social_item">
+                            <a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="icofont-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Begin:: Banner Section -->
+        <section class="page_banner">
+            <div class="layer_img move_anim animated">
+                <img src="images/bg/page_layer.png" alt=""/>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1">
+                        <h2 class="banner-title">Hinnakiri</h2>
+                        <p class="breadcrumbs"><a href="index.html">Avaleht</a><span>/</span>Hinnakiri</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Banner Section -->
+
+        <!-- Begin:: Kehahooldused Price Section -->
+        <section class="price-section">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Kehahooldused</h2>
+                    <p>Professionaalsed kehahooldused tselluliidi vähendamiseks, kehakontuuri parandamiseks ja naha pinguldamiseks</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Krüolipolüüs</h3>
+                                <p>Rasvakoe külmutamine ja jäädav eemaldamine</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Krüolipolüüs<small>Rasvakoe külmutamine 1 tsoon</small></div>
+                                    <div class="price">39€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Krüolipolüüs näole<small>Topeltlõua vähendamine</small></div>
+                                    <div class="price">39€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Cold Lipo Laser</h3>
+                                <p>Külma laseriga rasvapõletus</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Cold Lipo Laser<small>Valutu rasvapõletus</small></div>
+                                    <div class="price">19€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Kavitatsioon</h3>
+                                <p>80 kHz ultraheliga rasvapõletus</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Kavitatsioon<small>Ultraheli rasvapõletus - 3-5 cm 1 hooldusega</small></div>
+                                    <div class="price">25€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>ReShape Therapy</h3>
+                                <p>Keha kontuurimine ja pinguldamine</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">ReShape Therapy<small>Kehakontuuri modelleerimine</small></div>
+                                    <div class="price">33€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>RF Hooldused</h3>
+                                <p>Raadiosagedusega naha pinguldamine</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">RF Vaakummassaaž<small>Tselluliidi ja armkoe vastu</small></div>
+                                    <div class="price">25€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">RF-dermolifting<small>Naha pinguldamine ilma operatsioonita</small></div>
+                                    <div class="price">55€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Muud kehahooldused</h3>
+                                <p>Lisateenused ja spetsiaalsed hooldused</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Transion lihastreening<small>Lihaste toniseerimine</small></div>
+                                    <div class="price">14€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Microneedling<small>Kollageeninduktsiooniteraapia</small></div>
+                                    <div class="price">60€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Wow Shape kehamähis<small>Salendav kehamähis</small></div>
+                                    <div class="price">65€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">HIFU ultraheli lifting<small>Mitteinvasiivne pinguldamine</small></div>
+                                    <div class="price">199€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">GlowLift Ritual<small>Luksuslik rituaal</small></div>
+                                    <div class="price">40€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Kehahooldused Price Section -->
+
+        <!-- Begin:: Näohooldused Price Section -->
+        <section class="price-section bg-light">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Näohooldused</h2>
+                    <p>Professionaalsed näohooldused naha noorendamiseks, kontuurimiseks ja toitmiseks</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>RF Lifting näole</h3>
+                                <p>Näo raadiosagedus lifting</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">RF-lifting näole<small>Kortsude silumine ja pinguldamine</small></div>
+                                    <div class="price">20€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">RF lifting näole ja kehale<small>Kombineeritud hooldus</small></div>
+                                    <div class="price">29€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>LPG ja ReShape näole</h3>
+                                <p>Näo massaaž ja kontuurimine</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">LPG Näohooldus<small>Naha sära ja elastsuse taastamine</small></div>
+                                    <div class="price">33€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">ReShape Therapy Näole<small>Näokontuuri modelleerimine</small></div>
+                                    <div class="price">33€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Premium näohooldused</h3>
+                                <p>Eksklusiivised näohooldused</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Ultraheli näohooldus<small>Süvapuhastus ja vereringe</small></div>
+                                    <div class="price">39€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Royal Lift Facial<small>Premium näohooldus</small></div>
+                                    <div class="price">69€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">New Skin Restart Facial<small>Intensiivne uuendamine</small></div>
+                                    <div class="price">79€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Krüolipolüüs näole</h3>
+                                <p>Näokontuuri modeleerimine</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Krüolipolüüs näole<small>Topeltlõua vähendamine</small></div>
+                                    <div class="price">39€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Näohooldused Price Section -->
+
+        <!-- Begin:: Paketid Price Section -->
+        <section class="price-section bg-cream">
+            <div class="container">
+                <div class="section-title-custom">
+                    <h2>Hoolduste Paketid</h2>
+                    <p>Säästa kombineeritud pakkumistega - parimad tulemused madalama hinnaga</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Kombopaketid</h3>
+                                <p>Populaarsed kombineeritud hooldused</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Kavitatsioon + RF-vaakummassaaž<small>Kahekordne mõju figuurile ja nahale</small></div>
+                                    <div class="price">49€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">5x Kavitatsioon + 5x LPG<small>Sentimeetrite kaotamine</small></div>
+                                    <div class="price">59€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Inframatt + WowShape<small>Revolutsiooniline kombo</small></div>
+                                    <div class="price">59€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Cold Lipo + Krüolipolüüs Kombo<small>90 min intensiivhooldus</small></div>
+                                    <div class="price">69€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="price-table">
+                            <div class="price-table-header">
+                                <h3>Suuremad paketid</h3>
+                                <p>Pikemaajalised programmid</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Masinhoolduste pakett<small>Paindlik valik</small></div>
+                                    <div class="price">75€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Krüolipolüüs + LPG tutvumiskord<small>Eripakkumine</small></div>
+                                    <div class="price">79€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Täiuslik näokontuuri pakett<small>Kompleksne näohooldus</small></div>
+                                    <div class="price">99€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Kolmetunnine Superhooldus<small>Mitu tehnoloogiat ühes seanssis</small></div>
+                                    <div class="price">99€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="price-table package-highlight">
+                            <div class="price-table-header">
+                                <h3>Premium paketid</h3>
+                                <p>Maksimaalne tulemus - parimad pakkumised</p>
+                            </div>
+                            <div class="price-table-body">
+                                <div class="price-row">
+                                    <div class="service-name">Rasvapõletuse Superpakett<small>Kavitatsioon + Krüolipolüüs + LPG - võimas kombinatsioon</small></div>
+                                    <div class="price">119€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">10x Cold Lipo Laser + 10x Transion<small>Täiuslik duo kehavormimiseks</small></div>
+                                    <div class="price">129€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">Lipo Kavi Krüo LPG<small>Parimad kehahooldused järjest - kõik ühes päevas</small></div>
+                                    <div class="price">149€</div>
+                                </div>
+                                <div class="price-row">
+                                    <div class="service-name">5x LPG + 5x ReShape Näole<small>"Massaaži Kuninganna" - luksuslik topelthooldus</small></div>
+                                    <div class="price">289€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Paketid Price Section -->
+
+        <!-- Begin:: Info Section -->
+        <section class="price-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="info-box">
+                            <h4>Miks valida Blisse?</h4>
+                            <ul>
+                                <li>Professionaalsed spetsialistid</li>
+                                <li>Kaasaegsed seadmed ja tehnoloogiad</li>
+                                <li>Individuaalne lähenemine igale kliendile</li>
+                                <li>Paindlikud makseviisid</li>
+                                <li>Tasuta konsultatsioon</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info-box" style="background: linear-gradient(135deg, #d5b2a8, #ddbea9);">
+                            <h4>Broneerimise info</h4>
+                            <p>Broneerige aeg telefoni, e-maili või meie online broneerimissüsteemi kaudu. Tühistamine vähemalt 24h ette.</p>
+                            <ul>
+                                <li>Tel: +372 515 1566</li>
+                                <li>E-mail: info@blisse.ee</li>
+                                <li>Online: blisse.ee/broneeri</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: Info Section -->
+
+        <!-- Begin:: CTA Section -->
+        <section style="background: linear-gradient(135deg, #b98b74 0%, #d5b2a8 100%); padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3 style="color: #fff; font-size: 32px; margin-bottom: 10px;">Valmis alustama?</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin: 0;">Broneeri aeg ja alusta oma iluteekonda juba täna!</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-right text-center mt-4 mt-lg-0">
+                        <a href="booking.html" class="btn" style="background: #fff; color: #b98b74; padding: 15px 40px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block;">Broneeri aeg</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End:: CTA Section -->
+
+        <!-- Begin:: Instagram Feed Section -->
+        <section class="commonSection instagram-feed-section" style="padding: 60px 0; background: #fff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                        <h5 class="primaryFont" style="color: #b98b74;">Jälgi meid</h5>
+                        <h2 style="margin-bottom: 10px;">Instagram <span class="colorPrimary fontWeight400">@kehastuudio_tallinnas</span></h2>
+                        <p style="margin-bottom: 30px;">Vaata meie viimased uudised, hoolduste tulemused ja igapäevaelu stuudios</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="instagram-grid" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;">
+                            <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank" class="instagram-item" style="position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 1;">
+                                <img src="public/instagram-1.jpg" alt="Instagram" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                                <div class="instagram-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(185, 139, 116, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                    <i class="icofont-instagram" style="font-size: 32px; color: #fff;"></i>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank" class="instagram-item" style="position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 1;">
+                                <img src="public/instagram-2.jpg" alt="Instagram" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                                <div class="instagram-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(185, 139, 116, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                    <i class="icofont-instagram" style="font-size: 32px; color: #fff;"></i>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank" class="instagram-item" style="position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 1;">
+                                <img src="public/instagram-3.jpg" alt="Instagram" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                                <div class="instagram-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(185, 139, 116, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                    <i class="icofont-instagram" style="font-size: 32px; color: #fff;"></i>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank" class="instagram-item" style="position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 1;">
+                                <img src="public/instagram-4.jpg" alt="Instagram" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                                <div class="instagram-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(185, 139, 116, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                    <i class="icofont-instagram" style="font-size: 32px; color: #fff;"></i>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank" class="instagram-item" style="position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 1;">
+                                <img src="public/instagram-5.jpg" alt="Instagram" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                                <div class="instagram-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(185, 139, 116, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                    <i class="icofont-instagram" style="font-size: 32px; color: #fff;"></i>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank" class="instagram-item" style="position: relative; overflow: hidden; border-radius: 10px; aspect-ratio: 1;">
+                                <img src="public/instagram-6.jpg" alt="Instagram" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                                <div class="instagram-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(185, 139, 116, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+                                    <i class="icofont-instagram" style="font-size: 32px; color: #fff;"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center" style="margin-top: 30px;">
+                            <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank" class="mo_btn mob_lg"><i class="icofont-instagram"></i>Jälgi @kehastuudio_tallinnas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .instagram-item:hover img {
+                    transform: scale(1.1);
+                }
+                .instagram-item:hover .instagram-overlay {
+                    opacity: 1;
+                }
+                @media (max-width: 991px) {
+                    .instagram-grid {
+                        grid-template-columns: repeat(3, 1fr) !important;
+                    }
+                }
+                @media (max-width: 576px) {
+                    .instagram-grid {
+                        grid-template-columns: repeat(2, 1fr) !important;
+                    }
+                }
+            </style>
+        </section>
+        <!-- End:: Instagram Feed Section -->
+
+        <!-- Begin:: Footer Section -->
+        <footer class="footer_01">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="about_foo">
+                                <a href="index.html" class="fooLogo"><img src="images/blisse-logo.png" alt="Blisse"/></a>
+                                <p>Blisse - sinu ilu ja heaolu partner. Pakume professionaalseid keha- ja näohooldusi kaasaegsete tehnoloogiatega.</p>
+                                <div class="social_item">
+                                    <a href="https://www.facebook.com/kehastuudio" target="_blank"><i class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/kehastuudio_tallinnas/" target="_blank"><i class="icofont-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Menüü</h5>
+                                <ul>
+                                    <li><a href="index.html">Avaleht</a></li>
+                                    <li><a href="salongihooldused.html">Salongihooldused</a></li>
+                                    <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                    <li><a href="hinnakiri.html">Hinnakiri</a></li>
+                                    <li><a href="booking.html">Broneeri</a></li>
+                                    <li><a href="kontakt.html">Kontakt</a></li>
+                                <li><a href="/epood/">E-pood</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Hooldused</h5>
+                                <ul>
+                                    <li><a href="salongihooldused.html#kehahooldused">Kehahooldused</a></li>
+                                    <li><a href="salongihooldused.html#naohooldused">Näohooldused</a></li>
+                                    <li><a href="hoolduste-paketid.html">Hoolduste Paketid</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="foo_nav">
+                                <h5>Kontakt</h5>
+                                <ul>
+                                    <li><i class="icofont-phone"></i> +372 515 1566</li>
+                                    <li><i class="icofont-email"></i> info@blisse.ee</li>
+                                    <li><i class="icofont-location-pin"></i> Tallinn, Eesti</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p>&copy; 2024 Blisse. Kõik õigused kaitstud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End:: Footer Section -->
+
+        <!-- Start Include All JS -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/lightcase.js"></script>
+        <script src="js/theme.js"></script>
+        <!-- Fallback preloader hide -->
+        <script>
+            setTimeout(function() {
+                var preload = document.querySelector(".preloader");
+                if (preload) preload.style.display = "none";
+            }, 3000);
+        </script>
+        <!-- End Include All JS -->
+
+        <!-- Google Translate Script -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'et',
+                    includedLanguages: 'et,en,ru,fi,de,lv,lt',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>

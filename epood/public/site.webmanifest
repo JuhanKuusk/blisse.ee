@@ -1,0 +1,28 @@
+{
+    "name": "KehaStudio - Premium Ilutooted ja Salongihooldused",
+    "short_name": "KehaStudio",
+    "description": "Avasta premium ilutooted ja professionaalsed salongihooldused KehaStudios. Nahahooldus, kehahooldus, kollageen ja luksuslikud ilubränd.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#E6B3C7",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "start_url": "/",
+    "scope": "/"
+}

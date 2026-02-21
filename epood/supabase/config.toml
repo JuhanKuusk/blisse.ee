@@ -1,0 +1,25 @@
+project_id = "xncqzaluqdxrctopjgnc"
+
+[functions.sync-woocommerce-products]
+verify_jwt = false
+
+[functions.enrich-product]
+verify_jwt = false
+
+[functions.enrich-all-products]
+verify_jwt = false
+
+[functions.enrich-product-images]
+verify_jwt = false
+
+[functions.upload-reshape-image]
+verify_jwt = false
+
+[functions.update-product-name]
+verify_jwt = false
+
+[functions.upload-local-image]
+verify_jwt = false
+
+[functions.update-product-data]
+verify_jwt = false
