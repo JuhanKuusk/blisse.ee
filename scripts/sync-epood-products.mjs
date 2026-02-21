@@ -18,10 +18,10 @@ config({ path: join(__dirname, '..', '.env') });
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-// WooCommerce configuration (Blisse)
-const WC_URL = process.env.TARGET_WC_URL || 'https://blisse.ee';
-const WC_CONSUMER_KEY = process.env.TARGET_WC_CONSUMER_KEY;
-const WC_CONSUMER_SECRET = process.env.TARGET_WC_CONSUMER_SECRET;
+// WooCommerce configuration (using backend.kehastuudio.ee as source since blisse.ee has bot protection)
+const WC_URL = process.env.SOURCE_WC_URL || 'https://backend.kehastuudio.ee';
+const WC_CONSUMER_KEY = process.env.SOURCE_WC_CONSUMER_KEY;
+const WC_CONSUMER_SECRET = process.env.SOURCE_WC_CONSUMER_SECRET;
 
 // Initialize Supabase client
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
@@ -110,26 +110,43 @@ function transformProduct(wcProduct) {
 }
 
 /**
- * Upsert products to Supabase
+ * Upsert products to Supabase (in batches to avoid issues)
  */
 async function upsertProducts(products) {
   const transformedProducts = products.map(transformProduct);
 
   console.log(`Upserting ${transformedProducts.length} products to Supabase...`);
 
-  const { data, error } = await supabase
-    .from('blisse_products')
-    .upsert(transformedProducts, {
-      onConflict: 'wc_id',
-      ignoreDuplicates: false
-    });
+  // Upsert in batches of 10 to identify problematic products
+  const batchSize = 10;
+  let successCount = 0;
 
-  if (error) {
-    console.error('Error upserting products:', error);
-    throw error;
+  for (let i = 0; i < transformedProducts.length; i += batchSize) {
+    const batch = transformedProducts.slice(i, i + batchSize);
+
+    const { data, error } = await supabase
+      .from('blisse_products')
+      .upsert(batch, {
+        onConflict: 'wc_id',
+        ignoreDuplicates: false
+      });
+
+    if (error) {
+      console.error(`Error upserting batch ${Math.floor(i / batchSize) + 1}:`);
+      console.error('  Message:', error.message);
+      console.error('  Details:', error.details);
+      console.error('  Hint:', error.hint);
+      console.error('  Code:', error.code);
+      console.error('Problematic products:', batch.map(p => `${p.name} (wc_id: ${p.wc_id})`).join(', '));
+      // Continue with next batch instead of throwing
+    } else {
+      successCount += batch.length;
+      console.log(`  Batch ${Math.floor(i / batchSize) + 1} complete`);
+    }
   }
 
-  return data;
+  console.log(`Successfully upserted ${successCount} of ${transformedProducts.length} products`);
+  return null;
 }
 
 /**
